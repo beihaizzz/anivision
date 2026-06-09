@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\olk\\\\.claude\\\\projects\\\\e--AniVision\\\\memory\\\\\" -ErrorAction SilentlyContinue | Select-Object Name)",
+      "Read(//c/Users/olk/.claude/projects/e--AniVision/memory/**)",
+      "PowerShell(Get-ChildItem -Path \"e:\\\\AniVision\" -Recurse -File | ForEach-Object { $_.FullName })",
+      "PowerShell(Add-Type -AssemblyName System.Text.Encoding; $path = \"E:\\\\AniVision\\\\docs\\\\《人工智能系统课程设计》成绩评定标准.docx\"; $stream = [System.IO.File]::OpenRead\\($path\\); $buffer = New-Object byte[] 1024; $bytesRead = $stream.Read\\($buffer, 0, 1024\\); $stream.Close\\(\\); $text = [System.Text.Encoding]::Unicode.GetString\\($buffer, 0, $bytesRead\\); $text -replace \"[^a-zA-Z一-鿿0-9\\\\s\\\\p{P}]\", \"\")",
+      "Bash(pandoc \"E:/AniVision/docs/《人工智能系统课程设计》成绩评定标准.docx\" -o \"E:/AniVision/docs/grading.md\")",
+      "Bash(pandoc \"E:\\\\AniVision\\\\docs\\\\《人工智能系统课程设计》成绩评定标准.docx\" -t markdown --wrap=none)",
+      "Bash(pandoc \"E:/AniVision/docs/课程设计材料归档和答辩须知.docx\" -o \"E:/AniVision/docs/archive_notice.md\")",
+      "Bash(pandoc \"E:/AniVision/docs/项目编号-基于xx算法的xx智能系统-课程设计任务书（案例模板）.doc\" -o \"E:/AniVision/docs/task_template.md\")",
+      "Bash(python scripts/office/soffice.py --headless --convert-to docx \"E:/AniVision/docs/项目编号-基于xx算法的xx智能系统-课程设计任务书（案例模板）.doc\" --outdir \"E:/AniVision/docs/\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\olk\\\\.claude\\\\plugins\" -Recurse -Filter \"soffice.py\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object -First 1 FullName)",
+      "Read(//c/Users/olk/.claude//**)",
+      "Read(//c/Users/olk/.claude/**)",
+      "Bash(python \"C:/Users/olk/.claude/plugins/cache/anthropic-agent-skills/example-skills/c30d329f5814/skills/docx/scripts/office/soffice.py\" --headless --convert-to docx \"E:/AniVision/docs/项目编号-基于xx算法的xx智能系统-课程设计任务书（案例模板）.doc\" --outdir \"E:/AniVision/docs/\")"
+    ]
+  }
+}
