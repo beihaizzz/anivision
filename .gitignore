@@ -52,12 +52,16 @@ backend/.venv/
 *.pb
 *.onnx
 models/
+!ai_engine/models/label_map.json
+!ai_engine/models/class_names.json
+!ai_engine/models/dataset.csv
 checkpoints/
 data/raw/
 data/processed/
 
-# GAN generated images
+# GAN generated images / augmented data (regeneratable)
 outputs/generated/
+data/generated/
 
 # Office temp files
 ~$*.doc
