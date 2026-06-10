@@ -38,6 +38,13 @@ Desktop.ini
 .env.*.local
 *.log
 
+# Raw source images (pre-processed)
+data/原始数据/
+
+# Python virtual env (local)
+ai_engine/.venv/
+backend/.venv/
+
 # Models & Data (large files)
 *.pth
 *.pt

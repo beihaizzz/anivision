@@ -1,0 +1,16 @@
+[project]
+name = "ani-vision-ai"
+version = "0.1.0"
+description = "AniVision AI Engine - Anime Character Recognition"
+requires-python = ">=3.11"
+dependencies = [
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "tqdm>=4.65.0",
+]
+
+[tool.uv]
+# PyTorch installed separately with CUDA index:
+# uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
