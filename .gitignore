@@ -38,6 +38,12 @@ Desktop.ini
 .env.*.local
 *.log
 
+# Claude Code project config (local)
+.claude/
+
+# Sisyphus session data (auto-generated)
+.sisyphus/
+
 # Raw source images (pre-processed)
 data/原始数据/
 
