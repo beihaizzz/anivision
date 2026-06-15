@@ -46,6 +46,7 @@ Desktop.ini
 
 # Raw source images (pre-processed)
 data/原始数据/
+data/uploads/
 
 # Python virtual env (local)
 ai_engine/.venv/
@@ -64,6 +65,10 @@ models/
 checkpoints/
 data/raw/
 data/processed/
+
+# Dataset archives & unprocessed datasets
+AOT Characters Dataset.zip
+data/datasets/aot/
 
 # GAN generated images / augmented data (regeneratable)
 outputs/generated/
