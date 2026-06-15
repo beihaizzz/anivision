@@ -12,10 +12,13 @@ from fastapi.responses import JSONResponse
 
 from app.config import settings
 from app.database import init_db
+from app.middleware.behavior_middleware import BehaviorLoggingMiddleware
 from app.routers import (
     analytics,
     auth,
     characters,
+    follows,
+    likes,
     posts,
     recognition,
     search,
@@ -70,6 +73,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ── Behavior Logging Middleware ───────────────────────────────────────
+
+app.add_middleware(BehaviorLoggingMiddleware)
+
 # ── Global Exception Handlers ─────────────────────────────────────────
 
 
@@ -110,3 +117,5 @@ app.include_router(users.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
 app.include_router(search.router, prefix="/api")
 app.include_router(analytics.router, prefix="/api")
+app.include_router(likes.router, prefix="/api")
+app.include_router(follows.router, prefix="/api")

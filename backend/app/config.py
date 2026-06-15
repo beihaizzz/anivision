@@ -34,8 +34,8 @@ class Settings(BaseSettings):
     GENERATED_DIR: str = "../data/generated"
 
     # ── AI Model ──────────────────────────────────────────────────────
-    MODEL_PATH: str = "../ai_engine/models/efficientnet_b3.pth"
-    LABEL_MAP_PATH: str = "../ai_engine/models/label_map.json"
+    MODEL_PATH: str = "../ai_engine/models/onepiece/best_model.pth"
+    LABEL_MAP_PATH: str = "../ai_engine/models/onepiece/label_map.json"
 
     # ── CORS ──────────────────────────────────────────────────────────
     CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
