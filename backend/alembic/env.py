@@ -28,7 +28,7 @@ import app.models  # noqa: F401, E402
 config = context.config
 
 # Override the sqlalchemy.url from alembic.ini with our application settings
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+config.set_main_option("sqlalchemy.url", settings.ASYNC_DATABASE_URL)
 
 # Set up Python logging from the alembic.ini [loggers] section
 if config.config_file_name is not None:
